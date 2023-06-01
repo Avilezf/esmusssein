@@ -1,0 +1,7 @@
+{
+  "name": "Tchaikovsky",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
