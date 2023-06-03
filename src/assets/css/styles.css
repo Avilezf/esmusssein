@@ -1,0 +1,256 @@
+@font-face {
+    font-family: "Font-Didot";
+    src: url("/assets/fonts/didot/Didot-HTF-B06-Bold.ttf")
+}
+
+@font-face {
+    font-family: "Font-Didot-light";
+    src: url("/assets/fonts/didot/Didot-HTF-M24-Medium.ttf")
+}
+
+* {
+    font-family: "Font-Didot";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100% !important;
+}
+
+.brand {
+    padding-top: 50px;
+    padding-bottom: 150px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.brand h1 {
+    font-size: 58px;
+    letter-spacing: -0.031em;
+    line-height: 18px;
+}
+
+#title {
+    background-color: rgba(127, 225, 255, 0.623);
+    margin: 0;
+    padding-right: 10px;
+    margin-right: 10px;
+    line-height: 81px;
+}
+
+.text {
+    padding-bottom: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+
+.text p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;;
+    width: 80%;
+    padding-bottom: 60px;
+    padding-left: 20%;
+}
+
+.text a {
+    font-family: Font-Didot-light;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-style: solid;
+    font-size: 25px;
+    letter-spacing: 0.092em;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 20px;
+}
+
+.portrait {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+
+.portrait img {
+    width:  600px;
+    height: 800px;
+    object-fit: cover;
+    padding: 50px;
+    position: relative;
+}
+
+
+.container-portrait:hover{
+    transform: translateY(3px);
+}
+
+
+.container-portrait:hover::before {
+    opacity: 1;
+}
+
+.container-portrait::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width:  600px;
+    height: 800px;
+    background: rgba(127, 225, 255, 0.623);
+    z-index: 2;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+
+.overlayes {
+    position: absolute;
+    z-index: 3;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.overlayes:hover {
+    opacity: 1 !important;
+}
+
+
+#join-us{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    padding-bottom: 30px;
+}
+
+#join-us label {
+    font-family: Font-Didot-light;
+    color: black;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+#join-us .img::after{
+    width: 70%;
+}
+
+#join-us .Post {
+    padding-top: 50px;
+}
+
+.Post button {
+    width: 100%;
+}
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    
+    border-bottom: 5px solid black;
+  }
+  
+.arrow-down {
+    margin-top: 70px;
+    width: 0; 
+    height: 0; 
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    
+    border-top: 60px solid black;
+  }
+  
+ .arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    
+    border-left: 60px solid green;
+  }
+  
+ .arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    
+    border-right:10px solid blue; 
+  }
+
+footer {
+    padding-top: 100px;
+}
+
+
+
+@media (max-width: 1000px){
+    .portrait img {
+        float: left;
+        width:  800px;
+        height: 700px;
+        object-fit: cover;
+        padding: 0px;
+    }
+
+    .container-portrait::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width:  475px;
+        height: 700px;
+        background: rgba(127, 225, 255, 0.623);
+        z-index: 2;
+        transition: 0.2s;
+        opacity: 0;
+    }
+    
+}
+
+@media (max-width: 600px){
+
+    .container .brand{
+        flex-direction: column;
+    }
+
+    .portrait img {
+        float: left;
+        width:  800px;
+        height: 700px;
+        object-fit: cover;
+        padding: 0px;
+    }
+
+    .portrait .flex{
+        flex-direction: column;
+    }
+
+    .container-portrait::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width:  800px;
+        height: 700px;
+        background: rgba(127, 225, 255, 0.623);
+        z-index: 2;
+        transition: 0.2s;
+        opacity: 0;
+    }
+}
