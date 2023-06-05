@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  option = 0;
+
   public models = [
     {
       //url: 'https://i.pinimg.com/originals/3d/b7/7d/3db77df2a496f33b09c1861acc7a7b1c.jpg',
@@ -65,4 +67,7 @@ export class HomePage {
 
   constructor() { }
 
+  change(option: number){
+    this.option  = option;
+  }
 }
